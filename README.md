@@ -24,6 +24,7 @@ Part 2. Iris & pandas
     \iris\describe  - Returns the basic statistics about the columns in data set, like min, max, count, mean etc.
 
 Steps needed to run the application:
+
 After downloading the source code of the app you will need to:
 
 OPTIONAL:
@@ -41,4 +42,5 @@ MANDATORY:
 Testing
 
 While being int the main app directory type in terminal / command line:
+
     pytest

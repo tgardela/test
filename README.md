@@ -6,19 +6,20 @@ Part 1. Sequence
     n → n/2 (n is even)
     n → 3n + 1 (n is odd)
 
-Using the rule above and starting with 13, we generate the following sequence:
-13 → 40 → 20 → 10 → 5 → 16 → 8 → 4 → 2 → 1
+    Using the rule above and starting with 13, we generate the following sequence:
+    13 → 40 → 20 → 10 → 5 → 16 → 8 → 4 → 2 → 1
 
-It can be seen that this sequence (starting at 13 and finishing at 1) contains 10 terms. Assume that all starting numbers eventually finish at 1.
+    It can be seen that this sequence (starting at 13 and finishing at 1) contains 10 terms. Assume that all starting numbers eventually finish at 1.
 
-The endpoints:
+    The endpoints:
     \sequence\elem\{n} - Returns the value of the sequence for “n”
     \sequence\longest\{n} - Returns the value smaller than n, that has the longest chain.
 
 Part 2. Iris & pandas
     
     On service start get iris data set from https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv.
-The endpoints:
+    
+    The endpoints:
     \iris\group\sepal_length\{max} - Returns the number of each species with the maximum sepal_length of {max}.
     \iris\describe  - Returns the basic statistics about the columns in data set, like min, max, count, mean etc.
 

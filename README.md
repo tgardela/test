@@ -36,7 +36,7 @@ MANDATORY:
 
         pip install -r requirements
     
-3. Type in terminal / command line while in the main app directory (ubs):
+3. Type in terminal / command line while in the main app directory:
     
         flask run
 

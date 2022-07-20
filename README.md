@@ -33,11 +33,12 @@ OPTIONAL:
 
 MANDATORY:
 1. Install all the needed libraries (after having installed pip)
+
+        pip install -r requirements
     
-    pip install -r requirements
 3. Type in terminal / command line while in the main app directory (ubs):
     
-    flask run
+        flask run
 
 Testing
 

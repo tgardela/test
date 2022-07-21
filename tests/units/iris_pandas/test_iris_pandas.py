@@ -4,7 +4,7 @@ import pytest
 
 from iris_pandas.iris_pandas import (
     describe,
-    sepal_length
+    get_values_less_than
 )
 
 
@@ -28,10 +28,10 @@ def test_describe(expected_result):
     assert pd.io.json.dumps(describe(test_data), double_precision=8) == expected_result
 
 
-@pytest.mark.parametrize("test_length, expected_result", [
-    (5, {'setosa': '1', 'versicolor': '0', 'virginica': '1'})
+@pytest.mark.parametrize("test_length, test_value, expected_result", [
+    (5, 'sepal_length', {'setosa': '1', 'versicolor': '0', 'virginica': '1'})
 ])
-def test_sepal_length(test_length, expected_result):
+def test_get_values_less_than(test_length, test_value, expected_result):
     test_data = get_test_df()
 
-    assert sepal_length(test_length, test_data) == expected_result
+    assert get_values_less_than(test_length, test_value, test_data) == expected_result

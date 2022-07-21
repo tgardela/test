@@ -29,14 +29,15 @@ def describe(data: DataFrame = None) -> DataFrame:
     return data.describe()
 
 
-def sepal_length(length: float, data: DataFrame = None) -> Dict:
-    '''Function that calculates the number of each species with the maximum sepal_length of given 'length' parameter'''
+def get_values_less_than(value: float, value_type: str, data: DataFrame = None) -> Dict:
+    '''Function that calculates the count of rows in the DF per species that are less than given "value".
+    The count is done per "value_type"'''
     if data is None:
         data = read_data_from_url()
 
     species_lengths = {species: 0 for species in data.species.unique()}
 
     for sp in species_lengths:
-        species_lengths[sp] = str(data[(data.species == sp) & (data.sepal_length < length)].count().sepal_length)
+        species_lengths[sp] = str(data[(data.species == sp) & (data[value_type] < value)].count()[value_type])
 
     return species_lengths
